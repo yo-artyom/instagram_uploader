@@ -1,4 +1,4 @@
-*.rb
+*.gem
 /.bundle/
 /.yardoc
 /Gemfile.lock
