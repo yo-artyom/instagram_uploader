@@ -18,12 +18,24 @@ Or install it yourself as:
 
 ## Usage
 
+Somewhere in your code:
+```ruby
+require 'instagram_uploader'
+```
 
-## Development
+## Example
+```ruby
+require 'instagram_uploader'
 
-After checking out the repo, run `bin/setup` to install dependencies. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
+uploader = InstagramUploader::Uploader.new('your_login', 'your_password')
+uploader.upload('./image.jpg', 'image_description')
+```
 
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
+You can't upload an image with  description that will include control characters or symbol ' ( or many other things)
+before uploading i change my desc to
+```ruby
+desc.gsub(/[\'\n]/, '  ').gsub(/[^[:print:]]/) {|x| x.ord}
+```
 
 ## Contributing
 
