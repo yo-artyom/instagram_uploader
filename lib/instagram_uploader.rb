@@ -1,5 +1,6 @@
 require "instagram_uploader/version"
+require "instagram_uploader/uploader"
 
 module InstagramUploader
-  # Your code goes here...
+
 end
