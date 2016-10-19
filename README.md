@@ -27,7 +27,7 @@ require 'instagram_uploader'
 ```ruby
 require 'instagram_uploader'
 
-uploader = InstagramUploader::Uploader.new('your_login', 'your_password')
+uploader = InstagramUploader::Uploader.new('login', 'password')
 uploader.upload('./image.jpg', 'image_description')
 ```
 
